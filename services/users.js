@@ -28,7 +28,7 @@ async function getOneUser(id=1) {
 async function addUser(name, city, age) {
   const isSuccess = await db.query(
     `INSERT INTO users(name,city,age,is_active)
-     VALUES  ("${name}","${city}",${age},1);`
+     VALUES ('${name}','${city}',${age},1);`
   )
 
   return isSuccess
